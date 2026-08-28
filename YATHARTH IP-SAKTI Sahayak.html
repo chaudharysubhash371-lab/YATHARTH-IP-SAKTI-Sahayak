@@ -1,0 +1,1983 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YATHARTH IP-SAKTI Sahayak</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#10235c,#2563eb);
+    color:white;
+    padding:16px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    background:white;
+    color:#2563eb;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo h1{
+    font-size:20px;
+}
+
+.logo small{
+    opacity:.8;
+}
+
+.language{
+    padding:10px 15px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:linear-gradient(135deg,#10235c,#1d4ed8,#38bdf8);
+    color:white;
+    padding:65px 6%;
+}
+
+.hero-content{
+    max-width:1100px;
+    margin:auto;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:45px;
+    max-width:850px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    line-height:1.7;
+    color:#e5edff;
+}
+
+.buttons{
+    margin-top:28px;
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:13px 22px;
+    border:none;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.primary{
+    background:white;
+    color:#1d4ed8;
+}
+
+.secondary{
+    background:transparent;
+    border:1px solid white;
+    color:white;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    max-width:1100px;
+    margin:-40px auto 50px;
+    padding:0 20px;
+}
+
+.dashboard{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.section-title{
+    margin-bottom:18px;
+}
+
+.section-title h3{
+    font-size:23px;
+}
+
+.section-title p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+textarea{
+    width:100%;
+    min-height:170px;
+    padding:16px;
+    border:1px solid #d7deea;
+    border-radius:12px;
+    resize:vertical;
+    font-family:inherit;
+    outline:none;
+}
+
+textarea:focus{
+    border-color:#2563eb;
+}
+
+.upload{
+    border:2px dashed #cbd5e1;
+    padding:25px;
+    text-align:center;
+    margin-top:15px;
+    border-radius:12px;
+    cursor:pointer;
+    color:#64748b;
+}
+
+.analyze{
+    width:100%;
+    margin-top:18px;
+    background:#2563eb;
+    color:white;
+}
+
+/* ================= AYURVEDA ================= */
+
+.ayurveda{
+    margin-top:25px;
+    padding:22px;
+    border-radius:14px;
+    background:#f0fdf4;
+    border:1px solid #bbf7d0;
+}
+
+.ayurveda h3{
+    color:#166534;
+    margin-bottom:5px;
+}
+
+.ayurveda p{
+    color:#64748b;
+    font-size:13px;
+}
+
+.ayurveda-btn{
+    width:100%;
+    margin-top:15px;
+    background:#166534;
+    color:white;
+}
+
+.ayurveda-result{
+    display:none;
+    background:white;
+    padding:20px;
+    margin-top:18px;
+    border-radius:12px;
+}
+
+.score-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.progress{
+    height:10px;
+    background:#e5e7eb;
+    border-radius:20px;
+    margin-top:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:#16a34a;
+    transition:1s;
+}
+
+.explanation{
+    margin-top:15px;
+    line-height:1.6;
+    color:#475569;
+}
+
+.concepts{
+    margin-top:20px;
+}
+
+.concepts h4{
+    margin-bottom:8px;
+}
+
+.tag{
+    display:inline-block;
+    padding:7px 11px;
+    margin:4px;
+    border-radius:20px;
+    background:#dcfce7;
+    color:#166534;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.warning{
+    margin-top:15px;
+    padding:12px;
+    background:#fff7ed;
+    color:#9a3412;
+    border-radius:8px;
+    font-size:13px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.card{
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:20px;
+}
+
+.card-icon{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.card h4{
+    margin-bottom:8px;
+}
+
+.card p{
+    font-size:12px;
+    color:#64748b;
+    line-height:1.5;
+}
+
+/* ================= RESULTS ================= */
+
+.results{
+    display:none;
+    margin-top:30px;
+}
+
+.results-header{
+    padding:18px;
+    background:#eff6ff;
+    border-radius:12px;
+}
+
+.scores{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:15px;
+}
+
+.score-card{
+    padding:20px;
+    background:white;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+}
+
+.score-card small{
+    color:#64748b;
+}
+
+.score-card strong{
+    display:block;
+    font-size:30px;
+    color:#2563eb;
+    margin-top:8px;
+}
+
+.recommendations{
+    margin-top:20px;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:12px;
+}
+
+.recommendations li{
+    margin:9px 0;
+    color:#475569;
+}
+
+/* ================= WORKFLOW ================= */
+
+.workflow{
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.workflow h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.step{
+    text-align:center;
+}
+
+.number{
+    width:50px;
+    height:50px;
+    background:#2563eb;
+    color:white;
+    border-radius:50%;
+    margin:auto auto 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.step p{
+    color:#64748b;
+    font-size:12px;
+    line-height:1.5;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid #e5e7eb;
+}
+
+.feature-icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#64748b;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:#cbd5e1;
+    text-align:center;
+    padding:30px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .scores{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:35px;
+    }
+}
+
+@media(max-width:550px){
+
+    header{
+        padding:12px 4%;
+    }
+
+    .logo h1{
+        font-size:14px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+<div class="logo-icon">Y</div>
+
+<div>
+<h1>YATHARTH IP-SAKTI Sahayak</h1>
+<small id="tagline">
+AI-Powered Intellectual Property Assistant
+</small>
+</div>
+
+</div>
+
+<select class="language" id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="hi">हिंदी</option>
+<option value="mr">मराठी</option>
+</select>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge" id="badge">
+🚀 AI-Powered IP Innovation Platform
+</div>
+
+<h2 id="heroTitle">
+Protect Your Innovation with Intelligent IP Assistance
+</h2>
+
+<p id="heroText">
+YATHARTH IP-SAKTI Sahayak helps innovators analyze their ideas,
+detect traditional knowledge connections, discover prior art,
+evaluate patentability risks and receive actionable IP guidance.
+</p>
+
+<div class="buttons">
+
+<button class="btn primary" onclick="goToAnalyzer()" id="startBtn">
+Start IP Analysis →
+</button>
+
+<button class="btn secondary" onclick="goToWorkflow()" id="learnBtn">
+How It Works
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MAIN ANALYZER ================= -->
+
+<div class="container">
+
+<div class="dashboard">
+
+<div class="section-title">
+
+<h3 id="analyzerTitle">
+🔍 Intelligent IP & Ayurveda Analyzer
+</h3>
+
+<p id="analyzerSubtitle">
+Enter your invention, traditional knowledge or patent information.
+</p>
+
+</div>
+
+
+<textarea
+id="idea"
+placeholder="Example: An Ayurvedic formulation containing Ashwagandha and Brahmi for improving stress management..."
+></textarea>
+
+
+<div class="upload"
+onclick="document.getElementById('file').click()">
+
+📄 <strong id="uploadText">
+Upload Patent / Innovation / Traditional Knowledge Document
+</strong>
+
+<br>
+
+<small>
+PDF, DOCX, TXT
+</small>
+
+<input
+type="file"
+id="file"
+hidden
+accept=".pdf,.doc,.docx,.txt"
+onchange="fileSelected()"
+>
+
+</div>
+
+<p id="fileName"
+style="margin-top:8px;color:#2563eb;font-size:13px;">
+</p>
+
+
+<!-- ================= AYURVEDA DETECTOR ================= -->
+
+<div class="ayurveda">
+
+<h3 id="ayurvedaTitle">
+🌿 Ayurveda Relevance Detector
+</h3>
+
+<p id="ayurvedaDescription">
+Analyze whether the submitted information is related to Ayurveda,
+traditional medicine or Ayurvedic knowledge.
+</p>
+
+<button
+class="btn ayurveda-btn"
+onclick="checkAyurveda()"
+id="ayurvedaButton">
+
+🌿 Check Ayurveda Relevance
+
+</button>
+
+
+<div
+class="ayurveda-result"
+id="ayurvedaResult">
+
+<div class="score-row">
+
+<div>
+<strong id="ayurvedaStatus">
+Analyzing...
+</strong>
+</div>
+
+<div class="score" id="ayurvedaScore">
+0%
+</div>
+
+</div>
+
+
+<div class="progress">
+
+<div
+class="progress-bar"
+id="ayurvedaProgress">
+</div>
+
+</div>
+
+
+<div
+class="explanation"
+id="ayurvedaExplanation">
+</div>
+
+
+<div class="concepts">
+
+<h4 id="conceptTitle">
+Detected Ayurveda Concepts
+</h4>
+
+<div id="detectedConcepts">
+</div>
+
+</div>
+
+
+<div
+class="warning"
+id="ayurvedaWarning">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= IP ANALYSIS ================= -->
+
+<button
+class="btn analyze"
+onclick="analyzeInnovation()"
+id="analyzeBtn">
+
+⚡ Analyze Innovation
+
+</button>
+
+
+<!-- ================= QUICK FEATURES ================= -->
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🧠</div>
+
+<h4 id="f1Title">
+AI Analysis
+</h4>
+
+<p id="f1Text">
+Extract technical features, keywords, claims and concepts.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌿</div>
+
+<h4 id="f2Title">
+Ayurveda Detection
+</h4>
+
+<p id="f2Text">
+Identify herbs, formulations, therapies and Ayurvedic concepts.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🔎</div>
+
+<h4 id="f3Title">
+Prior-Art Search
+</h4>
+
+<p id="f3Text">
+Identify potentially similar patents and existing technologies.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📊</div>
+
+<h4 id="f4Title">
+Risk Assessment
+</h4>
+
+<p id="f4Text">
+Evaluate novelty, similarity and patentability risk.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ================= IP RESULTS ================= -->
+
+<div class="results" id="results">
+
+<div class="results-header">
+
+<h3 id="resultTitle">
+📊 IP Analysis Result
+</h3>
+
+<p id="resultDescription">
+Preliminary analysis generated by YATHARTH IP-SAKTI Sahayak.
+</p>
+
+</div>
+
+
+<div class="scores">
+
+<div class="score-card">
+
+<small id="noveltyTitle">
+Novelty Score
+</small>
+
+<strong>82%</strong>
+
+</div>
+
+
+<div class="score-card">
+
+<small id="similarityTitle">
+Prior-Art Similarity
+</small>
+
+<strong>24%</strong>
+
+</div>
+
+
+<div class="score-card">
+
+<small id="riskTitle">
+Patentability Risk
+</small>
+
+<strong>LOW</strong>
+
+</div>
+
+</div>
+
+
+<div class="recommendations">
+
+<h4 id="recommendTitle">
+💡 AI Recommendations
+</h4>
+
+<ul>
+
+<li id="r1">
+Strengthen the unique technical mechanism in the patent claims.
+</li>
+
+<li id="r2">
+Review similar prior-art documents before filing.
+</li>
+
+<li id="r3">
+Clearly define the technical problem and measurable technical advantage.
+</li>
+
+<li id="r4">
+Verify traditional knowledge information against trusted sources.
+</li>
+
+<li id="r5">
+Consult a qualified patent professional before final filing.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= WORKFLOW ================= -->
+
+<section class="workflow" id="workflow">
+
+<h2 id="workflowTitle">
+How YATHARTH IP-SAKTI Sahayak Works
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h4 id="s1Title">
+Input
+</h4>
+
+<p id="s1Text">
+User enters invention or uploads a document.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h4 id="s2Title">
+Text Extraction
+</h4>
+
+<p id="s2Text">
+System extracts and processes the information.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h4 id="s3Title">
+Ayurveda Detection
+</h4>
+
+<p id="s3Text">
+AI checks Ayurvedic and traditional knowledge relevance.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">4</div>
+
+<h4 id="s4Title">
+Prior-Art Analysis
+</h4>
+
+<p id="s4Text">
+Related patents and existing knowledge are identified.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">5</div>
+
+<h4 id="s5Title">
+IP Guidance
+</h4>
+
+<p id="s5Text">
+The user receives risk analysis and recommendations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2 id="featureHeading">
+Key Platform Features
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+
+<div class="feature-icon">🌐</div>
+
+<h3 id="p1Title">
+Multilingual AI
+</h3>
+
+<p id="p1Text">
+English, Hindi and Marathi interface with an architecture
+that can be extended to more Indian languages.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🌿</div>
+
+<h3 id="p2Title">
+Ayurveda Knowledge Detection
+</h3>
+
+<p id="p2Text">
+Detect Ayurvedic terminology, herbs, formulations,
+therapies and traditional medicine concepts.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🔐</div>
+
+<h3 id="p3Title">
+Secure IP Workspace
+</h3>
+
+<p id="p3Text">
+Designed for privacy-conscious handling of sensitive
+innovation and intellectual property information.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🤖</div>
+
+<h3 id="p4Title">
+Explainable AI
+</h3>
+
+<p id="p4Text">
+Show why a particular Ayurveda relevance or IP risk
+has been identified.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📚</div>
+
+<h3 id="p5Title">
+Traditional Knowledge
+</h3>
+
+<p id="p5Text">
+Identify potential connections between an invention
+and traditional knowledge.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">📈</div>
+
+<h3 id="p6Title">
+IP Dashboard
+</h3>
+
+<p id="p6Text">
+View relevance, novelty, similarity and risk indicators
+in a single interface.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<strong>
+YATHARTH IP-SAKTI Sahayak
+</strong>
+
+<br><br>
+
+<span id="footerText">
+AI-powered assistance for smarter Intellectual Property decisions.
+</span>
+
+<br><br>
+
+© 2026 YATHARTH IP-SAKTI Sahayak
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   FILE SELECTION
+========================================================= */
+
+function fileSelected(){
+
+    const file =
+    document.getElementById("file").files[0];
+
+    if(file){
+
+        document.getElementById("fileName").textContent =
+        "Selected file: " + file.name;
+
+    }
+
+}
+
+
+/* =========================================================
+   AYURVEDA KNOWLEDGE DATABASE
+========================================================= */
+
+const ayurvedaDatabase = {
+
+    ayurvedaTerms: [
+
+        "ayurveda",
+        "ayurvedic",
+        "ayurved",
+        "dosha",
+        "vata",
+        "pitta",
+        "kapha",
+        "prakriti",
+        "vikriti",
+        "agni",
+        "ama",
+        "ojas",
+        "dhatu",
+        "srotas",
+        "rasa",
+        "guna",
+        "virya",
+        "vipaka",
+        "rasayana",
+        "panchakarma",
+        "dinacharya",
+        "ritucharya",
+        "nadi pariksha",
+        "nadi chikitsa",
+        "dravya guna",
+        "marma",
+        "chikitsa"
+
+    ],
+
+    herbs: [
+
+        "ashwagandha",
+        "withania somnifera",
+        "tulsi",
+        "ocimum sanctum",
+        "neem",
+        "azadirachta indica",
+        "turmeric",
+        "haldi",
+        "curcumin",
+        "amla",
+        "emblica officinalis",
+        "brahmi",
+        "bacopa monnieri",
+        "shatavari",
+        "asparagus racemosus",
+        "giloy",
+        "guduchi",
+        "tinospora cordifolia",
+        "arjuna",
+        "terminalia arjuna",
+        "haritaki",
+        "harad",
+        "bibhitaki",
+        "baheda",
+        "mulethi",
+        "licorice",
+        "ginger",
+        "adrak",
+        "cinnamon",
+        "dalchini",
+        "black pepper",
+        "pippali"
+
+    ],
+
+    formulations: [
+
+        "churna",
+        "choorna",
+        "kwath",
+        "kashaya",
+        "arishta",
+        "asava",
+        "avaleha",
+        "lehyam",
+        "vati",
+        "bhasma",
+        "taila",
+        "ghrita",
+        "swarasa",
+        "rasayana",
+        "ayurvedic formulation",
+        "herbal formulation"
+
+    ],
+
+    therapies: [
+
+        "panchakarma",
+        "abhyanga",
+        "shirodhara",
+        "swedana",
+        "basti",
+        "virechana",
+        "vamana",
+        "nasya",
+        "udvartana",
+        "marma therapy",
+        "ayurvedic therapy"
+
+    ],
+
+    traditionalKnowledge: [
+
+        "traditional knowledge",
+        "traditional medicine",
+        "traditional remedy",
+        "medicinal plant",
+        "herbal medicine",
+        "indigenous medicine",
+        "ethnomedicine",
+        "folk medicine"
+
+    ]
+
+};
+
+
+/* =========================================================
+   AYURVEDA DETECTION ENGINE
+========================================================= */
+
+function checkAyurveda(){
+
+    const text =
+    document.getElementById("idea")
+    .value
+    .toLowerCase()
+    .trim();
+
+    if(text === ""){
+
+        alert(
+        "Please enter your invention or information first."
+        );
+
+        return;
+    }
+
+
+    const result =
+    document.getElementById("ayurvedaResult");
+
+    result.style.display = "block";
+
+
+    let detected = [];
+
+    let categoryCount = {
+
+        ayurvedaTerms:0,
+        herbs:0,
+        formulations:0,
+        therapies:0,
+        traditionalKnowledge:0
+
+    };
+
+
+    /*
+       Search every knowledge category
+    */
+
+    for(const category in ayurvedaDatabase){
+
+        ayurvedaDatabase[category].forEach(keyword => {
+
+            if(text.includes(keyword)){
+
+                if(!detected.includes(keyword)){
+
+                    detected.push(keyword);
+
+                    categoryCount[category]++;
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /*
+       Calculate relevance score
+    */
+
+    let score = 0;
+
+    score += categoryCount.ayurvedaTerms * 18;
+
+    score += categoryCount.herbs * 8;
+
+    score += categoryCount.formulations * 12;
+
+    score += categoryCount.therapies * 12;
+
+    score += categoryCount.traditionalKnowledge * 8;
+
+
+    score = Math.min(score,100);
+
+
+    /*
+       Reduce false positive
+       if only one generic herb is present
+    */
+
+    if(
+        detected.length === 1 &&
+        categoryCount.herbs === 1 &&
+        categoryCount.ayurvedaTerms === 0
+    ){
+
+        score = Math.min(score,35);
+
+    }
+
+
+    /*
+       Update UI
+    */
+
+    document.getElementById("ayurvedaScore")
+    .textContent = score + "%";
+
+
+    document.getElementById("ayurvedaProgress")
+    .style.width = score + "%";
+
+
+    const status =
+    document.getElementById("ayurvedaStatus");
+
+    const explanation =
+    document.getElementById("ayurvedaExplanation");
+
+    const warning =
+    document.getElementById("ayurvedaWarning");
+
+
+    /*
+       Status
+    */
+
+    if(score >= 70){
+
+        status.textContent =
+        "🟢 Strongly Related to Ayurveda";
+
+        explanation.textContent =
+        "The submitted information contains multiple Ayurvedic concepts, terminology, medicinal plants, formulations or therapies.";
+
+        warning.textContent =
+        "High relevance does not automatically prove that the information is authentic Ayurvedic traditional knowledge. Expert and source verification is recommended.";
+
+    }
+
+    else if(score >= 40){
+
+        status.textContent =
+        "🟡 Possibly Related to Ayurveda";
+
+        explanation.textContent =
+        "Some Ayurveda or traditional medicine concepts were detected, but additional contextual verification is required.";
+
+        warning.textContent =
+        "The detected concepts should be verified against trusted Ayurvedic knowledge sources.";
+
+    }
+
+    else{
+
+        status.textContent =
+        "🔴 Not Clearly Related to Ayurveda";
+
+        explanation.textContent =
+        "The system did not find enough identifiable Ayurvedic concepts in the submitted information.";
+
+        warning.textContent =
+        "This does not conclusively prove that the information is unrelated to Ayurveda. Context-based AI analysis is recommended.";
+
+    }
+
+
+    /*
+       Display concepts
+    */
+
+    const conceptBox =
+    document.getElementById("detectedConcepts");
+
+    conceptBox.innerHTML = "";
+
+
+    if(detected.length === 0){
+
+        conceptBox.innerHTML =
+        "<span class='tag'>No clear Ayurveda concepts detected</span>";
+
+    }
+
+    else{
+
+        detected.forEach(item => {
+
+            const span =
+            document.createElement("span");
+
+            span.className = "tag";
+
+            span.textContent = item;
+
+            conceptBox.appendChild(span);
+
+        });
+
+    }
+
+}
+
+
+/* =========================================================
+   IP ANALYSIS DEMO
+========================================================= */
+
+function analyzeInnovation(){
+
+    const idea =
+    document.getElementById("idea")
+    .value
+    .trim();
+
+    if(idea === ""){
+
+        alert(
+        "Please enter your invention information first."
+        );
+
+        return;
+
+    }
+
+
+    document.getElementById("results")
+    .style.display = "block";
+
+
+    document.getElementById("results")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+function goToAnalyzer(){
+
+    document.querySelector(".container")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+function goToWorkflow(){
+
+    document.getElementById("workflow")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================================
+   MULTILINGUAL SYSTEM
+========================================================= */
+
+const translations = {
+
+en:{
+
+tagline:"AI-Powered Intellectual Property Assistant",
+
+badge:"🚀 AI-Powered IP Innovation Platform",
+
+heroTitle:
+"Protect Your Innovation with Intelligent IP Assistance",
+
+heroText:
+"YATHARTH IP-SAKTI Sahayak helps innovators analyze their ideas, detect traditional knowledge connections, discover prior art, evaluate patentability risks and receive actionable IP guidance.",
+
+startBtn:"Start IP Analysis →",
+
+learnBtn:"How It Works",
+
+analyzerTitle:
+"🔍 Intelligent IP & Ayurveda Analyzer",
+
+analyzerSubtitle:
+"Enter your invention, traditional knowledge or patent information.",
+
+uploadText:
+"Upload Patent / Innovation / Traditional Knowledge Document",
+
+ayurvedaTitle:
+"🌿 Ayurveda Relevance Detector",
+
+ayurvedaDescription:
+"Analyze whether the submitted information is related to Ayurveda, traditional medicine or Ayurvedic knowledge.",
+
+ayurvedaButton:
+"🌿 Check Ayurveda Relevance",
+
+conceptTitle:
+"Detected Ayurveda Concepts",
+
+analyzeBtn:
+"⚡ Analyze Innovation",
+
+f1Title:"AI Analysis",
+f1Text:
+"Extract technical features, keywords, claims and concepts.",
+
+f2Title:"Ayurveda Detection",
+f2Text:
+"Identify herbs, formulations, therapies and Ayurvedic concepts.",
+
+f3Title:"Prior-Art Search",
+f3Text:
+"Identify potentially similar patents and existing technologies.",
+
+f4Title:"Risk Assessment",
+f4Text:
+"Evaluate novelty, similarity and patentability risk.",
+
+resultTitle:
+"📊 IP Analysis Result",
+
+resultDescription:
+"Preliminary analysis generated by YATHARTH IP-SAKTI Sahayak.",
+
+noveltyTitle:
+"Novelty Score",
+
+similarityTitle:
+"Prior-Art Similarity",
+
+riskTitle:
+"Patentability Risk",
+
+recommendTitle:
+"💡 AI Recommendations",
+
+r1:
+"Strengthen the unique technical mechanism in the patent claims.",
+
+r2:
+"Review similar prior-art documents before filing.",
+
+r3:
+"Clearly define the technical problem and measurable technical advantage.",
+
+r4:
+"Verify traditional knowledge information against trusted sources.",
+
+r5:
+"Consult a qualified patent professional before final filing.",
+
+workflowTitle:
+"How YATHARTH IP-SAKTI Sahayak Works",
+
+s1Title:"Input",
+s1Text:"User enters invention or uploads a document.",
+
+s2Title:"Text Extraction",
+s2Text:"System extracts and processes the information.",
+
+s3Title:"Ayurveda Detection",
+s3Text:"AI checks Ayurvedic and traditional knowledge relevance.",
+
+s4Title:"Prior-Art Analysis",
+s4Text:"Related patents and existing knowledge are identified.",
+
+s5Title:"IP Guidance",
+s5Text:"The user receives risk analysis and recommendations.",
+
+featureHeading:"Key Platform Features",
+
+p1Title:"Multilingual AI",
+p1Text:
+"English, Hindi and Marathi interface with an architecture that can be extended to more Indian languages.",
+
+p2Title:"Ayurveda Knowledge Detection",
+p2Text:
+"Detect Ayurvedic terminology, herbs, formulations, therapies and traditional medicine concepts.",
+
+p3Title:"Secure IP Workspace",
+p3Text:
+"Designed for privacy-conscious handling of sensitive innovation and intellectual property information.",
+
+p4Title:"Explainable AI",
+p4Text:
+"Show why a particular Ayurveda relevance or IP risk has been identified.",
+
+p5Title:"Traditional Knowledge",
+p5Text:
+"Identify potential connections between an invention and traditional knowledge.",
+
+p6Title:"IP Dashboard",
+p6Text:
+"View relevance, novelty, similarity and risk indicators in a single interface.",
+
+footerText:
+"AI-powered assistance for smarter Intellectual Property decisions."
+
+},
+
+
+hi:{
+
+tagline:
+"AI-संचालित बौद्धिक संपदा सहायक",
+
+badge:
+"🚀 AI-संचालित IP नवाचार प्लेटफॉर्म",
+
+heroTitle:
+"स्मार्ट IP सहायता के साथ अपने नवाचार की सुरक्षा करें",
+
+heroText:
+"YATHARTH IP-SAKTI Sahayak आपके विचारों का विश्लेषण, पारंपरिक ज्ञान से संबंध की पहचान, Prior-Art खोज और पेटेंट जोखिम मूल्यांकन करने में सहायता करता है।",
+
+startBtn:
+"IP विश्लेषण शुरू करें →",
+
+learnBtn:
+"यह कैसे काम करता है",
+
+analyzerTitle:
+"🔍 IP और आयुर्वेद विश्लेषक",
+
+analyzerSubtitle:
+"अपने आविष्कार, पारंपरिक ज्ञान या पेटेंट जानकारी दर्ज करें।",
+
+uploadText:
+"पेटेंट / नवाचार / पारंपरिक ज्ञान दस्तावेज़ अपलोड करें",
+
+ayurvedaTitle:
+"🌿 आयुर्वेद संबंध पहचानकर्ता",
+
+ayurvedaDescription:
+"जाँचें कि दी गई जानकारी आयुर्वेद, पारंपरिक चिकित्सा या आयुर्वेदिक ज्ञान से संबंधित है या नहीं।",
+
+ayurvedaButton:
+"🌿 आयुर्वेद संबंध जाँचें",
+
+conceptTitle:
+"पहचाने गए आयुर्वेदिक Concepts",
+
+analyzeBtn:
+"⚡ नवाचार का विश्लेषण करें",
+
+f1Title:
+"AI विश्लेषण",
+
+f1Text:
+"तकनीकी विशेषताओं, कीवर्ड, दावों और अवधारणाओं को निकालें।",
+
+f2Title:
+"आयुर्वेद पहचान",
+
+f2Text:
+"जड़ी-बूटियों, फॉर्मूलेशन, उपचार और आयुर्वेदिक अवधारणाओं की पहचान करें।",
+
+f3Title:
+"Prior-Art खोज",
+
+f3Text:
+"समान पेटेंट और मौजूदा तकनीकों की पहचान करें।",
+
+f4Title:
+"जोखिम मूल्यांकन",
+
+f4Text:
+"नवीनता, समानता और पेटेंट जोखिम का मूल्यांकन करें।",
+
+resultTitle:
+"📊 IP विश्लेषण परिणाम",
+
+resultDescription:
+"YATHARTH IP-SAKTI Sahayak द्वारा प्रारंभिक विश्लेषण।",
+
+noveltyTitle:
+"नवीनता स्कोर",
+
+similarityTitle:
+"Prior-Art समानता",
+
+riskTitle:
+"पेटेंट जोखिम",
+
+recommendTitle:
+"💡 AI सुझाव",
+
+r1:
+"पेटेंट दावों में अद्वितीय तकनीकी प्रक्रिया को मजबूत करें।",
+
+r2:
+"फाइलिंग से पहले समान Prior-Art दस्तावेज़ों की समीक्षा करें।",
+
+r3:
+"तकनीकी समस्या और मापनीय तकनीकी लाभ को स्पष्ट करें।",
+
+r4:
+"पारंपरिक ज्ञान की जानकारी को विश्वसनीय स्रोतों से सत्यापित करें।",
+
+r5:
+"अंतिम फाइलिंग से पहले पेटेंट विशेषज्ञ से सलाह लें।",
+
+workflowTitle:
+"YATHARTH IP-SAKTI Sahayak कैसे काम करता है",
+
+s1Title:"इनपुट",
+s1Text:"आविष्कार दर्ज करें या दस्तावेज़ अपलोड करें।",
+
+s2Title:"Text Extraction",
+s2Text:"सिस्टम जानकारी को निकालकर प्रोसेस करता है।",
+
+s3Title:"आयुर्वेद पहचान",
+s3Text:"AI आयुर्वेद और पारंपरिक ज्ञान से संबंध जाँचता है।",
+
+s4Title:"Prior-Art विश्लेषण",
+s4Text:"संबंधित पेटेंट और मौजूदा ज्ञान की पहचान की जाती है।",
+
+s5Title:"IP मार्गदर्शन",
+s5Text:"उपयोगकर्ता को जोखिम विश्लेषण और सुझाव मिलते हैं।",
+
+featureHeading:
+"मुख्य प्लेटफॉर्म सुविधाएँ",
+
+p1Title:"बहुभाषी AI",
+p1Text:
+"अंग्रेज़ी, हिंदी और मराठी इंटरफेस। भविष्य में अन्य भारतीय भाषाएँ जोड़ी जा सकती हैं।",
+
+p2Title:"आयुर्वेद ज्ञान पहचान",
+p2Text:
+"आयुर्वेदिक शब्दावली, जड़ी-बूटियों, फॉर्मूलेशन, उपचार और पारंपरिक चिकित्सा अवधारणाओं की पहचान।",
+
+p3Title:"सुरक्षित IP Workspace",
+p3Text:
+"संवेदनशील नवाचार और बौद्धिक संपदा जानकारी के सुरक्षित प्रबंधन के लिए डिज़ाइन।",
+
+p4Title:"Explainable AI",
+p4Text:
+"समझें कि सिस्टम ने आयुर्वेद संबंध या IP जोखिम की पहचान क्यों की।",
+
+p5Title:"पारंपरिक ज्ञान",
+p5Text:
+"आविष्कार और पारंपरिक ज्ञान के बीच संभावित संबंधों की पहचान करें।",
+
+p6Title:"IP Dashboard",
+p6Text:
+"संबंध, नवीनता, समानता और जोखिम संकेतकों को एक ही इंटरफेस में देखें।",
+
+footerText:
+"स्मार्ट Intellectual Property निर्णयों के लिए AI-संचालित सहायता।"
+
+},
+
+
+mr:{
+
+tagline:
+"AI-सक्षम बौद्धिक संपदा सहाय्यक",
+
+badge:
+"🚀 AI-सक्षम IP नवकल्पना प्लॅटफॉर्म",
+
+heroTitle:
+"स्मार्ट IP सहाय्याने तुमच्या नवकल्पनेचे संरक्षण करा",
+
+heroText:
+"YATHARTH IP-SAKTI Sahayak तुमच्या कल्पनांचे विश्लेषण, पारंपरिक ज्ञानाशी संबंध शोधणे, Prior-Art शोध आणि पेटंट जोखीम मूल्यांकन करण्यास मदत करते.",
+
+startBtn:
+"IP विश्लेषण सुरू करा →",
+
+learnBtn:
+"हे कसे कार्य करते",
+
+analyzerTitle:
+"🔍 IP आणि आयुर्वेद विश्लेषक",
+
+analyzerSubtitle:
+"तुमचा आविष्कार, पारंपरिक ज्ञान किंवा पेटंट माहिती प्रविष्ट करा.",
+
+uploadText:
+"पेटंट / नवकल्पना / पारंपरिक ज्ञान दस्तऐवज अपलोड करा",
+
+ayurvedaTitle:
+"🌿 आयुर्वेद संबंध शोधक",
+
+ayurvedaDescription:
+"दिलेली माहिती आयुर्वेद, पारंपरिक औषध किंवा आयुर्वेदिक ज्ञानाशी संबंधित आहे का ते तपासा.",
+
+ayurvedaButton:
+"🌿 आयुर्वेद संबंध तपासा",
+
+conceptTitle:
+"आढळलेले आयुर्वेदिक Concepts",
+
+analyzeBtn:
+"⚡ नवकल्पनेचे विश्लेषण करा",
+
+f1Title:"AI विश्लेषण",
+
+f1Text:
+"तांत्रिक वैशिष्ट्ये, कीवर्ड, दावे आणि संकल्पना शोधा.",
+
+f2Title:"आयुर्वेद शोध",
+
+f2Text:
+"औषधी वनस्पती, फॉर्म्युलेशन, उपचार आणि आयुर्वेदिक संकल्पना शोधा.",
+
+f3Title:"Prior-Art शोध",
+
+f3Text:
+"समान पेटंट आणि विद्यमान तंत्रज्ञान शोधा.",
+
+f4Title:"जोखीम मूल्यांकन",
+
+f4Text:
+"नवीनता, समानता आणि पेटंट जोखीम तपासा.",
+
+resultTitle:
+"📊 IP विश्लेषण परिणाम",
+
+resultDescription:
+"YATHARTH IP-SAKTI Sahayak द्वारे प्राथमिक विश्लेषण.",
+
+noveltyTitle:
+"नवीनता स्कोअर",
+
+similarityTitle:
+"Prior-Art समानता",
+
+riskTitle:
+"पेटंट जोखीम",
+
+recommendTitle:
+"💡 AI शिफारसी",
+
+r1:
+"पेटंट दाव्यांमधील अद्वितीय तांत्रिक प्रक्रिया मजबूत करा.",
+
+r2:
+"फाइलिंगपूर्वी समान Prior-Art दस्तऐवज तपासा.",
+
+r3:
+"तांत्रिक समस्या आणि मोजता येणारा तांत्रिक फायदा स्पष्ट करा.",
+
+r4:
+"पारंपरिक ज्ञानाची माहिती विश्वसनीय स्रोतांद्वारे तपासा.",
+
+r5:
+"अंतिम फाइलिंगपूर्वी पेटंट तज्ज्ञांचा सल्ला घ्या.",
+
+workflowTitle:
+"YATHARTH IP-SAKTI Sahayak कसे कार्य करते",
+
+s1Title:"इनपुट",
+s1Text:"आविष्कार प्रविष्ट करा किंवा दस्तऐवज अपलोड करा.",
+
+s2Title:"Text Extraction",
+s2Text:"सिस्टम माहिती काढून तिचे विश्लेषण करते.",
+
+s3Title:"आयुर्वेद शोध",
+s3Text:"AI आयुर्वेद आणि पारंपरिक ज्ञानाशी संबंध तपासते.",
+
+s4Title:"Prior-Art विश्लेषण",
+s4Text:"संबंधित पेटंट आणि विद्यमान ज्ञान शोधले जाते.",
+
+s5Title:"IP मार्गदर्शन",
+s5Text:"जोखीम विश्लेषण आणि शिफारसी मिळतात.",
+
+featureHeading:
+"मुख्य प्लॅटफॉर्म वैशिष्ट्ये",
+
+p1Title:"बहुभाषिक AI",
+p1Text:
+"इंग्रजी, हिंदी आणि मराठी इंटरफेस. भविष्यात इतर भारतीय भाषा जोडता येतील.",
+
+p2Title:"आयुर्वेद ज्ञान शोध",
+p2Text:
+"आयुर्वेदिक शब्दावली, औषधी वनस्पती, फॉर्म्युलेशन, उपचार आणि पारंपरिक औषध संकल्पना शोधा.",
+
+p3Title:"सुरक्षित IP Workspace",
+p3Text:
+"संवेदनशील नवकल्पना आणि बौद्धिक संपदा माहिती सुरक्षितपणे हाताळण्यासाठी डिझाइन केलेले.",
+
+p4Title:"Explainable AI",
+p4Text:
+"सिस्टमने आयुर्वेद संबंध किंवा IP जोखीम का ओळखली हे समजून घ्या.",
+
+p5Title:"पारंपरिक ज्ञान",
+p5Text:
+"आविष्कार आणि पारंपरिक ज्ञानामधील संभाव्य संबंध शोधा.",
+
+p6Title:"IP Dashboard",
+p6Text:
+"संबंध, नवीनता, समानता आणि जोखीम निर्देशक एका इंटरफेसमध्ये पहा.",
+
+footerText:
+"स्मार्ट Intellectual Property निर्णयांसाठी AI-सक्षम सहाय्य."
+
+}
+
+};
+
+
+/* =========================================================
+   LANGUAGE CHANGE
+========================================================= */
+
+function changeLanguage(){
+
+    const lang =
+    document.getElementById("language").value;
+
+    const t = translations[lang];
+
+    for(const key in t){
+
+        const element =
+        document.getElementById(key);
+
+        if(element){
+
+            element.textContent =
+            t[key];
+
+        }
+
+    }
+
+    document.documentElement.lang = lang;
+
+}
+
+</script>
+
+</body>
+</html>
+```
